@@ -16,8 +16,8 @@ def scrapinfo(search_item):
 	results=[]
 	for f in food_items:
 		title=search_item
-		info=f.find('div',attrs={"class":"content-col content-col-1"}).text
+		info=f.find('div',attrs={"class":"content-col content-col-1 slidedown-content slidedown-content-text"}).text
 		imgtag=f.find('img')
-		p=FoodItems(title,info,imgtag.attrs['data-src'])
+		p=FoodItems(title,info,imgtag.attrs['src'])
 		results.append(p)
 	return results
