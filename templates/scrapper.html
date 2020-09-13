@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body bgcolor="burgandy">
+    
+    <h1>Search for any Food Item from the following list!!</h1>
+    <li>
+      1.  (Fruit) Juices <br />
+      2.  Alcoholic Drinks & Beverages<br />
+      3.  Baking Ingredients<br />
+      4.  Beef & Veal<br />
+      5.  Beer<br />
+      6.  Cakes & Pies<br />
+      7.  Candy & Sweets<br />
+      8.  Canned Fruit<br />
+      9.  Cereal Products<br />
+      10. Cheese<br />
+      11. Cold Cuts & Lunch Meat<br />
+      12. Cream Cheese<br />
+      13. Dishes & Meals<br />
+      14. Fast Food<br />
+      15. Fish & Seafood<br />
+      16. Fruits<br />
+      17. Herbs & Spices<br />
+      18. Ice Cream<br />
+      19. Legumes<br />
+      20. Meat<br />
+      21. Milk & Dairy Products<br />
+      22. Non-Alcoholic Drinks & Beverages<br />
+      23. Nuts & Seeds<br />
+      24. Oatmeal, Muesli & Cereals<br />
+      25. Offal & Giblets<br />
+      26. Oils & Fats<br />
+      27. Pasta & Noodles<br />
+      28. Pastries, Breads & Rolls<br />
+      29. Pizza<br />
+      30. Pork<br />
+      31. Potato Products<br />
+      32. Poultry & Fowl<br />
+      33. Sauces & Dressings<br />
+      34. Sausage<br />
+      35. Sliced Cheese<br />
+      36. Soda & Soft Drinks<br />
+      37. Soups<br />
+      38. Spreads<br />
+      39. Tropical & Exotic Fruits<br />
+      40. Vegetable Oils<br />
+      41. Vegetables<br />
+      42. Venison & Game<br />
+      43. Wine<br />
+      44. Yogurt<br />
+
+
+    </li>
+
+    <form action="" method="POST">
+      <input type="text" name="query" placeholder="Query">
+      <button type="submit">Search</button>
+    </form>
+
+    <ul>
+    {% for f in items %}
+      <li>
+        <h2>{{f.title}}</h2>
+        <img src="{{f.imgtag}}" alt="">
+        <h3></h3>
+         {{f.info}}
+      </li>
+    {% endfor %}
+    </ul>
+
+  </body>
+</html>
